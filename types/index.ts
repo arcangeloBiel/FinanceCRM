@@ -15,6 +15,7 @@ export interface Receita {
   valor: number;
   categoria: string;
   data: string;
+  pago: boolean;
 }
 
 export interface Despesa {
@@ -24,6 +25,7 @@ export interface Despesa {
   valor: number;
   categoria: string;
   data: string;
+  pago: boolean;
 }
 
 export interface DashboardSummary {
