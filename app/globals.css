@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+/* Hide Next.js Dev Indicator/Toast */
+[data-nextjs-toast] {
+  display: none !important;
+}
+
+.nextjs-static-indicator-toast-wrapper,
+.nextjs-toast-errors-parent {
+  display: none !important;
+}
+
+/* Hide the shadow DOM host for Next.js tools */
+nextjs-portal {
+  display: none !important;
+}
